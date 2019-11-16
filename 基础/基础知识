@@ -17,4 +17,4 @@
 (11)动态性(Java能够适应不断发展的环境)
 3、关于JVM、JDK和JRE：
 (1)JVM：Java虚拟机(JVM)是运行Java字节码的虚拟机，JVM有针对不同系统的特定实现，目的是使用相同的字节码，他们都会给出相同的结果。
-(2)JDK：即
+(2)JDK：即Java Development Kit，他是功能齐全的Java SDK，他拥有JRE所拥有的
