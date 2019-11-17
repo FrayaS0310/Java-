@@ -201,3 +201,29 @@ G.复制：copyOf()
 30、深拷贝和浅拷贝：
 (1)浅拷贝：对基本数据类型进行值传递，对引用数据类型进行引用传递；
 (2)深拷贝：对基本数据类型进行值传递，对引用数据类型，创建一个新的对象，并复制其内容。
+31、BigDecimal
+(1)BigDecimal的用处：浮点数之间的等值判断，基本数据类型不能用==来比较，包装数据类型不能用equals来判断，BigDecimal用来解决精度丢失的问题，使用
+BigDecimal来定义浮点数的值，在进行浮点数的运算操作。
+(2)BigDecimal的大小比较：a.compareTo(b)，返回-1表示小于，0表示等于，1表示大于。
+32、集合
+(1)Arrays.asList()使用指南
+A.简介：Arrays.asList()可以将一个数组转换为一个List。
+B.使用时的注意事项：
+a.传递的数组必须是对象数组，而不是基本类型。
+b.使用集合的修改方法：add()、remove()、clear()会抛出异常。Arrays.asList()返回的并不是java.util.ArrayList，而是java.util.Arrays的一个内部类。
+c.如何正确的将数组转换为ArrayList：
+List list = new ArrayList<>(Array.asList("a","b","c"));
+
+Integer[] myArray = {1, 2, 3};
+List myList = Arrays.stream(myArray).collect(Collectors.toList());
+Integer[] myArray2 = {1, 2, 3};
+List myList = Arrays.stream(myArray2).boxed().collect(Collectors.toList());
+
+对于可变集合：
+List<String> i1 = ImmutableList.of("string", "elements");
+List<String> i1 = IMmutableList.copyOf(aStringArray);
+
+对于可变集合：
+List<String> l1 = Lists.newArrayList(anotherListOrCollection);    // from collection
+List<String> l2 = Lists.newArrayList(aStringArray);               // from array
+List<String> l3 = Lists.newArrayList("or", "string", "elements"); // from varargs
